@@ -1,50 +1,19 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter, Noto_Sans_JP } from 'next/font/google';
+import './globals.css';
+import { RootMetadata } from '@/settings';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const notoSansJP = Noto_Sans_JP({
+  variable: '--font-noto-sans-jp',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const inter = Inter({
+  variable: '--font-inter',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
-
-export const metadata: Metadata = {
-  title: "Ichis inc.",
-  appleWebApp: {
-    title: "Ichis inc.",
-  },
-  icons: {
-    icon: [
-      { url: '/favicons/favicon.ico', sizes: 'any' },
-      { url: '/favicons/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-      { url: '/favicons/favicon.svg', type: 'image/svg+xml' }
-    ],
-    shortcut: [
-      { url: '/favicons/favicon.ico' }
-    ],
-    apple: [
-      { url: '/favicons/apple-touch-icon.png', sizes: '180x180' }
-    ],
-    other: [
-      { 
-        url: '/favicons/android-chrome-192x192.png', 
-        sizes: '192x192',
-        type: 'image/png'
-      },
-      { 
-        url: '/favicons/android-chrome-512x512.png', 
-        sizes: '512x512',
-        type: 'image/png'
-      }
-    ]
-  },
-  manifest: '/favicons/site.webmanifest',
-};
+export const metadata: Metadata = RootMetadata;
 
 export default function RootLayout({
   children,
@@ -53,9 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${notoSansJP.variable} ${inter.variable} antialiased`}>
         {children}
       </body>
     </html>
