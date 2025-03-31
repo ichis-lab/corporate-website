@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
 import { RootMetadata } from '@/settings';
+import { CommonLayout } from '@/components/Layouts/CommonLayout';
 
 const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${notoSansJP.variable} ${inter.variable} antialiased`}>
-        {children}
+        <CommonLayout>{children}</CommonLayout>
       </body>
     </html>
   );
