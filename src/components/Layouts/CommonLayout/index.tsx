@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/ui/Icons';
-import { FORM_URL } from '@/settings';
+import { COMPANY_NAME, FORM_URL } from '@/settings';
 
 const Header = () => {
   return (
@@ -20,7 +20,7 @@ const Header = () => {
 const Footer = () => {
   return (
     <div className={`flex items-center justify-center text-sm h-[80px]`}>
-      © 2024 ichis株式会社 All Rights Reserved.
+      © 2024 {COMPANY_NAME}株式会社 All Rights Reserved.
     </div>
   );
 };

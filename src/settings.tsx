@@ -1,9 +1,11 @@
 export const FORM_URL = 'https://forms.gle/DLeKUaac5rBdPqAi9';
 
+export const COMPANY_NAME = 'Ichis';
+
 export const RootMetadata = {
-  title: 'Ichis inc.',
+  title: `${COMPANY_NAME} inc.`,
   appleWebApp: {
-    title: 'Ichis inc.',
+    title: `${COMPANY_NAME} inc.`,
   },
   icons: {
     icon: [
