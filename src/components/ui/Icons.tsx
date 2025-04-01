@@ -1,13 +1,21 @@
 import Image from 'next/image';
 
+type IconProps = {
+  width?: number;
+  height?: number;
+};
+
 export const Icons = {
-  LogoText: () => (
-    <Image
-      src="/images/company-name.svg"
-      alt="Logo Text"
-      width={100}
-      height={100}
-      priority
-    />
-  ),
+  LogoText: ({ width = 130 }: IconProps) => {
+    const height = width * 0.2;
+    return (
+      <Image
+        src="/images/company-name.svg"
+        alt="Logo Text"
+        width={width}
+        height={height}
+        priority
+      />
+    );
+  },
 };
