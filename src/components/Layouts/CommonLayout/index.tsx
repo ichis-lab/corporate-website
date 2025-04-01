@@ -1,14 +1,15 @@
 import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/ui/Icons';
 import { COMPANY_NAME, FORM_URL } from '@/settings';
+import Link from 'next/link';
 
 const Header = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex items-center bg-gradient-to-b h-[80px] lg:h-[120px] from-[#22222299] to-[#73737300]">
       <div className="container mx-auto flex items-center justify-between">
-        <a href="/">
+        <Link href="/">
           <Icons.LogoText />
-        </a>
+        </Link>
         <a href={FORM_URL} target="_blank">
           <Button>お問い合わせ</Button>
         </a>
