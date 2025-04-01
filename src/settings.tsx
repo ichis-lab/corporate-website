@@ -1,3 +1,5 @@
+export const FORM_URL = 'https://forms.gle/DLeKUaac5rBdPqAi9';
+
 export const RootMetadata = {
   title: 'Ichis inc.',
   appleWebApp: {
