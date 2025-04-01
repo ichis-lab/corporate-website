@@ -7,11 +7,15 @@ import { CommonLayout } from '@/components/Layouts/CommonLayout';
 const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  preload: true,
 });
 
 const inter = Inter({
   variable: '--font-inter',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  preload: true,
 });
 
 export const metadata: Metadata = RootMetadata;
@@ -22,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body className={`${notoSansJP.variable} ${inter.variable} antialiased`}>
         <CommonLayout>{children}</CommonLayout>
       </body>
