@@ -3,7 +3,6 @@ export default function Home() {
     <div>
       <Top />
       <Company />
-      <div className="h-[100px]" />
     </div>
   );
 }
@@ -45,15 +44,19 @@ const Data = [
 const Company = () => {
   return (
     <div className="container-lg bg-white flex items-center">
-      <div className="mt-32">
-        <h2 className="text-5xl font-bold">COMPANY</h2>
-        <div className="flex flex-col gap-6 mt-8 mx-10">
+      <div className="my-16 md:my-32">
+        <h2 className="text-2xl md:text-5xl font-bold max-sm:text-center">
+          COMPANY
+        </h2>
+        <div className="flex flex-col gap-6 mt-16 sm:mx-0 md:mx-10 ">
           {Data.map((item) => (
             <div
               key={item.title}
-              className="flex items-center font-[500] text-base"
+              className="flex items-center font-[500] text-sm md:text-base"
             >
-              <div className="w-[300px] text-gray-600">{item.title}</div>
+              <div className="min-w-[140px] md:min-w-[300px] text-gray-600">
+                {item.title}
+              </div>
               <div className="">{item.value}</div>
             </div>
           ))}
