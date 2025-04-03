@@ -20,8 +20,10 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <div className={`flex items-center justify-center text-sm h-[80px]`}>
-      © 2024 {COMPANY_NAME}株式会社 All Rights Reserved.
+    <div
+      className={`flex items-center justify-center text-sm h-[80px] bg-white`}
+    >
+      © 2025 {COMPANY_NAME}株式会社 All Rights Reserved.
     </div>
   );
 };

@@ -1,22 +1,8 @@
 import type { Metadata } from 'next';
-import { Inter, Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
 import { RootMetadata } from '@/settings';
 import { CommonLayout } from '@/components/Layouts/CommonLayout';
-
-const notoSansJP = Noto_Sans_JP({
-  variable: '--font-noto-sans-jp',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  subsets: ['latin'],
-  preload: true,
-});
-
-const inter = Inter({
-  variable: '--font-inter',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  subsets: ['latin'],
-  preload: true,
-});
+import { inter, notoSansJP } from '@/theme/fonts';
 
 export const metadata: Metadata = RootMetadata;
 
